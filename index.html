@@ -1,0 +1,48 @@
+<img 
+  srcset="small.jpg 300w,
+          medium.jpg 600w,
+          large.jpg 900w"
+  sizes="(max-width: 320px) 300px,
+         (max-width: 640px) 600px,
+         900px"
+  src="fallback.jpg" 
+  alt="Responsive image"
+/>
+<img 
+  src="image.jpg" 
+  loading="lazy" 
+  alt="Lazy loaded image"
+/>
+<link rel="stylesheet" href="https://cdn.example.com/styles.css">
+<script src="https://cdn.example.com/script.js"></script>
+<img src="https://cdn.example.com/images/photo.jpg" alt="CDN hosted image">
+<link rel="preload" href="hero-image.jpg" as="image">
+<link rel="preload" href="critical.css" as="style">
+<link rel="preload" href="main-font.woff2" as="font" crossorigin>
+<!-- Resource Hints -->
+<link rel="preconnect" href="https://cdn.example.com">
+<link rel="dns-prefetch" href="https://cdn.example.com">
+
+<!-- Preload Critical Resources -->
+<link rel="preload" href="hero-image.jpg" as="image">
+<link rel="preload" href="critical.css" as="style">
+<link rel="preload" href="main-font.woff2" as="font" crossorigin>
+
+<!-- Optimized Responsive Image -->
+<img 
+  srcset="small.webp 300w,
+          medium.webp 600w,
+          large.webp 900w"
+  sizes="(max-width: 320px) 300
+
+<!-- Inline critical CSS -->
+<style>
+    /* Critical CSS here */
+  </style>
+  
+  <!-- Defer non-critical CSS -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  
+  <!-- Defer JavaScript -->
+  <script defer src="non-critical.js"></script>
+  <script async src="analytics.js"></script>  
